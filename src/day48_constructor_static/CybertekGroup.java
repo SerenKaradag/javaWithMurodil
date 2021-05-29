@@ -29,5 +29,9 @@ public class CybertekGroup {
         }else{
             System.out.println("People4 is not member of group2");
         }
+
+        // remove some members some member from group1
+        group1.removeMember("Seren");
+        System.out.println(group1);
     }
 }
