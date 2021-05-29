@@ -4,10 +4,8 @@ public class Driver {
   private String name;
 
 
-
-
-
-
+    public Driver() {
+    }
 
     public Driver(String name) {
         this.name = name;

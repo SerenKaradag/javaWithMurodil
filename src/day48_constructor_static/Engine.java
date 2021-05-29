@@ -4,6 +4,9 @@ public class Engine {
     private  int cylinders;
 
 
+    public Engine() {
+    }
+
     public Engine(int cylinders) {
         this.cylinders = cylinders;
     }
