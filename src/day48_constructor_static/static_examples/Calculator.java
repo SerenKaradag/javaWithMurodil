@@ -7,5 +7,8 @@ public class Calculator {
 
     public void multiply (int num1, int num2){ // intance// object METHOD
         System.out.println(num1 * num2);
+
+
+
     }
 }
