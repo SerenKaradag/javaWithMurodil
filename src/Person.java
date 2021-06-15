@@ -5,14 +5,14 @@ public class Person {
     char gender; // DATA
     //behaviour -> method
     public void speak() { // BEHAVIOUR
-        System.out.println("PersonT is speaking");
+        System.out.println("Person is speaking");
     }
 }
 
 
 class People{
     public static void main(String[] args) {
-        //create object of PersonT class - instantiate
+        //create object of Person class - instantiate
         Person person1 = new Person();
         person1.firstName = "Bob";
         person1.age = 33;

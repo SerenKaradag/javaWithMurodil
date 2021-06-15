@@ -1,0 +1,14 @@
+package day53_inheritance.hiding;
+
+public class Mobile extends Phone{
+    String type ="Mobile Phone";
+
+    public static void use(){
+        System.out.println("Using the Phone");
+    }
+
+    public void text(){
+        use();
+        System.out.println("and making  a phone call");
+    }
+}

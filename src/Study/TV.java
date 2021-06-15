@@ -2,6 +2,7 @@ package Study;
 
 public class TV {
 
+    String name = "seren";
     int channel=1;
     int volumeLevel=0;
     boolean on = false;
@@ -9,6 +10,7 @@ public class TV {
 
     public TV() {
         System.out.println("Creating TV object using no args-constructor");
+
     }
 
     public TV(String brand) {
@@ -21,10 +23,14 @@ public class TV {
     }
 
     public void setChannel(int channel) {
-        this.channel = channel;
+        if(channel > 0 && channel < 120){
+            this.channel = channel;
+        }else{
+            System.out.println("ERROR: TV is either OFF or invalid Channel");
+        }
     }
 
-    public int getVolumeLevel(){
+    public int getVolumeLevel() {
         return volumeLevel;
     }
 
@@ -41,16 +47,34 @@ public class TV {
     }
 
     public void channelUp(){
-        this.channel++;
+        if(this.channel > 0 || this.channel < 120){
+            this.channel++;
+        }else{
+            System.out.println("ERROR: TV is either OFF or invalid Channel");
+        }
+
     }
     public void channelDown(){
-        this.channel--;
+        if(this.channel > 0 || this.channel < 120 || this.on == true){
+            this.channel--;
+        }else{
+            System.out.println("ERROR: TV is either OFF or invalid Channel");
+        }
     }
     public void volumeUp(){
-        this.volumeLevel++;
+        if(this.volumeLevel < 7 || this.volumeLevel >0 || this.on == true){
+            this.volumeLevel++;
+        }else{
+            System.out.println("ERROR: TV is either OFF or invalid Volume level");
+        }
+
     }
     public void volumeDown(){
-        this.volumeLevel--;
+        if(this.volumeLevel < 7 || this.volumeLevel >0 || this.on == true){
+            this.volumeLevel--;
+        }else{
+            System.out.println("ERROR: TV is either OFF or invalid Volume level");
+        }
     }
     public void turnOn(){
         if (this.on == true) {
@@ -58,7 +82,7 @@ public class TV {
         }else{
             this.on=true;
         }
-        }
+    }
     public void turnOff(){
         if(this.on == false){
             System.out.println("TV is already OFF");
@@ -67,17 +91,8 @@ public class TV {
         }
     }
     public void isOn(){
-        if(this.channel > 0 || this.channel < 120){
-
-        }else{
-            System.out.println("ERROR: TV is either OFF or invalid Channel");
-        }
-        if(this.volumeLevel <= 7 || this.volumeLevel >=0){
-
-        }else if(!on == true){
-            System.out.println("ERROR: TV is either OFF or invalid Volume level");
-        }
-    }
-
 
     }
+
+
+}
